@@ -4,12 +4,12 @@ import os
 
 
 class TestMain(unittest.TestCase):
-    def test_return_backwards_string(self):
+    def test_return_backwards_string(self) -> None:
         random_string: str = "This is my test string"
         random_string_reversed: str = "gnirts tset ym si sihT"
         self.assertEqual(random_string_reversed, return_backwards_string(random_string))
 
-    def test_get_env(self):
+    def test_get_env(self) -> None:
         self.assertEqual(os.environ.get("MODE"), get_mode())
 
 
