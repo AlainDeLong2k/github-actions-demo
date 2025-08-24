@@ -14,8 +14,8 @@ def return_backwards_string(random_string):
 
 
 @app.route("/get-mode")
-def get_mode():
-    return os.environ.get("MODE")
+def get_mode() -> str:
+    return os.environ.get("MODE") or ""
 
 
 if __name__ == "__main__":
